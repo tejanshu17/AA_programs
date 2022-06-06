@@ -25,9 +25,12 @@ public class quicksort {
          // applying randomness
 
         int temp = 0;
-        int index = 0;
-        index= (low)+(int)(Math.random()*(high-low+1));
-        System.out.println("RANDOM NUM IS" + index);
+
+        Random ran = new Random();
+  
+        int index = low+ran.nextInt(high-low+1);
+
+        // swapping random
 
         temp=arr[index];
         arr[index]=arr[low];
